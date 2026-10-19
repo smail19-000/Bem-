@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>اختبار تحضيري لشهادة التعليم المتوسط (BEM)</title>
+    <style>
+        body {
+            font-family: 'Tahoma', Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+        .container {
+            max-width: 800px;
+            background: #ffffff;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .teacher-banner {
+            background: #e8f4fd;
+            border-right: 4px solid #2980b9;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 16px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .question-card {
+            background: #fafbfc;
+            border: 1px solid #e1e8ed;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .question-title {
+            font-weight: bold;
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+        .math-expr {
+            direction: ltr;
+            unicode-bidi: embed;
+            display: inline-block;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .options label {
+            display: block;
+            font-weight: normal;
+            margin-bottom: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .student-info {
+            background: #eef2f7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .info-row {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .info-row div {
+            flex: 1;
+        }
+        label.input-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #34495e;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #219653;
+        }
+        #result-section {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .pass { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .encourage { background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>اختبار تحضيري لشهادة التعليم المتوسط (BEM)</h1>
+    <h2>مادة الرياضيات: الجذور التربيعية والمعادلات</h2>
+
+    <!-- لافتة تعريفية بالأستاذ والدروس -->
+    <div class="teacher-banner">
+        دروس الدعم والمرافقة التربوية للتعلم من مستوى التعليم المتوسط (BEM) إلى غاية السنة النهائية (المرحلة الثانوية)<br>
+        إعداد الأستاذ: <strong>الأستاذ عباوي</strong>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid #ccc; margin-bottom: 25px;">
+
+    <form id="quiz-form">
+
+        <!-- السؤال 1 -->
+        <div class="question-card">
+            <div class="question-title">السؤال 1 (2 نقاط): بسيّط العبارة التالية: <span class="math-expr">√12</span></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> أ) <span class="math-expr">3√2</span></label>
+                <label><input type="radio" name="q1" value="b"> ب) <span class="math-expr">2√3</span></label>
+                <label><input type="radio" name="q1" value="c"> ج) <span class="math-expr">4√3</span></label>
+            </div>
+        </div>
+
+        <!-- السؤال 2 -->
+        <div class="question-card">
+            <div class="question-title">السؤال 2 (2 نقاط): اكتب العدد <span class="math-expr">√50</span> على الشكل <span class="math-expr">a√2</span></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> أ) <span class="math-expr">5√2</span></label>
+                <label><input type="radio" name="q2" value="b"> ب) <span class="math-expr">25√2</span></label>
+                <label><input type="radio" name="q2" value="c"> ج) <span class="math-expr">10√2</span></label>
+            </div>
+        </div>
+
+        <!-- السؤال 3 -->
+        <div class="question-card">
+            <div class="question-title">السؤال 3 (2 نقاط): احسب الناتج المبسط للعبارة: <span class="math-expr">A = 3√2 + √18</span></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> أ) <span class="math-expr">6√2</span></label>
+                <label><input type="radio" name="q3" value="b"> ب) <span class="math-expr">4√2</span></label>
+                <label><input type="radio" name="q3" value="c"> ج) <span class="math-expr">9√2</span></label>
+            </div>
+        </div>
+
+        <!-- السؤال 4 -->
+        <div class="question-card">
+            <div class="question-title">السؤال 4 (2 نقاط): ما هي النتيجة المبسطة للعبارة: <span class="math-expr">B = 3√2 - √8 - 2√32</span> ؟</div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> أ) <span class="math-expr">-9√2</span></label>
+                <label><input type="radio" name="q4" value="b"> ب) <span class="math-expr">9√2</span></label>
+                <label><input type="radio" name="q4" value="c"> ج) <span class="math-expr">-7√2</span></label>
+            </div>
+        </div>
+
+        <!-- السؤال 5 -->
+        <div class="question-card">
+            <div class="question-title">السؤال 5 (2 نقاط): انشر وبسّط العبارة الآتية: <span class="math-expr">(√3 + 1)(√3 - 2)</span></div>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> أ) <span class="math-expr">1 - √3</span></label>
+                <label><input type="radio" name="q5" value="b"> ب) <span class="math-expr">1 + √3</span></label>
+                <label><input type="radio" name="q5" value="c"> ج) <span class="math-expr">-1 - √3</span></label>
+            </div>
+        </div>
+
+        <!-- السؤال 6 -->
+        <div class="question-card">
+            <div class="question-title">السؤال 6 (2 نقاط): حل المعادلة الآتية: <span class="math-expr">3x - 1 = x + 3</span></div>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a"> أ) <span class="math-expr">x = 1</span></label>
+                <label><input type="radio" name="q6" value="b"> ب) <span class="math-expr">x = 2</span></label>
+                <label><input type="radio" name="q6" value="c"> ج) <span class="math-expr">x = 4</span></label>
+            </div>
+        </div>
+
+        <!-- السؤال 7 -->
+        <div class="question-card">
+            <div class="question-title">السؤال 7 (2 نقاط): أوجد حلول المعادلة: <span class="math-expr">x² - 9 = 0</span></div>
+            <div class="options">
+                <label><input type="radio" name="q7" value="a"> أ) <span class="math-expr">x = 3</span> ou <span class="math-expr">x = -3</span></label>
+                <label><input type="radio" name="q7" value="b"> ب) <span class="math-expr">x = 9</span> ou <span class="math-expr">x = -9</span></label>
+                <label><input type="radio" name="q7" value="c"> ج) <span class="math-expr">x = 3</span> فقط</label>
+            </div>
+        </div>
+
+        <!-- السؤال 8 -->
+        <div class="question-card">
+            <div class="question-title">السؤال 8 (2 نقاط): ما هي حلول المعادلة التالية: <span class="math-expr">x² = 16</span> ؟</div>
+            <div class="options">
+                <label><input type="radio" name="q8" value="a"> أ) <span class="math-expr">x = 4</span> فقط</label>
+                <label><input type="radio" name="q8" value="b"> ب) <span class="math-expr">x = 4</span> ou <span class="math-expr">x = -4</span></label>
+                <label><input type="radio" name="q8" value="c"> ج) ليس لها حل</label>
+            </div>
+        </div>
+
+        <!-- السؤال 9 -->
+        <div class="question-card">
+            <div class="question-title">السؤال 9 (2 نقاط): حل المعادلة التالية: <span class="math-expr">x² - 2 = 2x² - 7</span></div>
+            <div class="options">
+                <label><input type="radio" name="q9" value="a"> أ) <span class="math-expr">x = 5</span> ou <span class="math-expr">x = -5</span></label>
+                <label><input type="radio" name="q9" value="b"> ب) <span class="math-expr">x = √5</span> ou <span class="math-expr">x = -√5</span></label>
+                <label><input type="radio" name="q9" value="c"> ج) <span class="math-expr">x = 25</span></label>
+            </div>
+        </div>
+
+        <!-- السؤال 10 -->
+        <div class="question-card">
+            <div class="question-title">السؤال 10 (2 نقاط): ما هو عدد حلول المعادلة: <span class="math-expr">x² + 5 = 5</span> ؟</div>
+            <div class="options">
+                <label><input type="radio" name="q10" value="a"> أ) حلان مختلفان</label>
+                <label><input type="radio" name="q10" value="b"> ب) حل وحيد وهو 0 (<span class="math-expr">x = 0</span>)</label>
+                <label><input type="radio" name="q10" value="c"> ج) ليس لها حل</label>
+            </div>
+        </div>
+
+        <!-- معلومات التلميذ وأستاذ المادة في الأسفل -->
+        <div class="student-info">
+            <div class="info-row">
+                <div>
+                    <label class="input-label" for="nom">اللقب (Nom):</label>
+                    <input type="text" id="nom" placeholder="أدخل لقبك هنا">
+                </div>
+                <div>
+                    <label class="input-label" for="prenom">الإسم (Prénom):</label>
+                    <input type="text" id="prenom" placeholder="أدخل اسمك هنا">
+                </div>
+            </div>
+            <div class="info-row">
+                <div>
+                    <label class="input-label" for="enseignant">أستاذ المادة (Enseignant) :</label>
+                    <input type="text" id="enseignant" value="الأستاذ عباوي" readonly style="background-color: #e9ecef; font-weight: bold; color: #2c3e50;">
+                </div>
+            </div>
+        </div>
+
+        <button type="button" onclick="calculateScore()">تصحيح الاختبار وإظهار النتيجة</button>
+    </form>
+
+    <div id="result-section"></div>
+</div>
+
+<script>
+    function calculateScore() {
+        const answers = {
+            q1: 'b', // 2√3
+            q2: 'a', // 5√2
+            q3: 'a', // 6√2
+            q4: 'a', // -9√2
+            q5: 'a', // 1 - √3
+            q6: 'b', // x = 2
+            q7: 'a', // x = 3 or x = -3
+            q8: 'b', // x = 4 or x = -4
+            q9: 'b', // x = √5 or x = -√5
+            q10: 'b' // x = 0
+        };
+
+        let score = 0;
+        let nom = document.getElementById('nom').value.trim();
+        let prenom = document.getElementById('prenom').value.trim();
+        let enseignant = document.getElementById('enseignant').value.trim();
+
+        if(!nom || !prenom) {
+            alert("من فضلك أدخل اللقب والاسم في الأسفل قبل عرض النتيجة!");
+            return;
+        }
+
+        for (let q in answers) {
+            let selected = document.querySelector(`input[name="${q}"]:checked`);
+            if (selected && selected.value === answers[q]) {
+                score += 2;
+            }
+        }
+
+        let resultDiv = document.getElementById('result-section');
+        resultDiv.style.display = 'block';
+
+        let positiveMessage = "";
+        if (score >= 16) {
+            positiveMessage = "ممتاز جداً! أنت مستعد تماماً لامتحان شهادة التعليم المتوسط، واصل بهذا التألق والاجتهاد!";
+            resultDiv.className = "pass";
+        } else if (score >= 10) {
+            positiveMessage = "عمل جيد ومقبول جداً! لديك أساسيات متينة، فقط تحتاج إلى القليل من التركيز وستصل إلى القمة بإذن الله.";
+            resultDiv.className = "pass";
+        } else {
+            positiveMessage = "محاولة طيبة ومجهود يُشكر! البدايات دائماً فرصة للتعلم وتدارك الأخطاء. أنت قادر على التحسن أكثر في المرة القادمة، واصل المحاولة وستصل لمبتغاك بإذن الله!";
+            resultDiv.className = "encourage";
+        }
+
+        let enseignantText = enseignant ? `<br>أستاذ المادة: ${enseignant}` : '';
+
+        resultDiv.innerHTML = `التلميذ(ة): ${nom} ${prenom}${enseignantText}<br>` +
+                              `العلامة الإجمالية: ${score} / 20<br><br>` +
+                              `<span style="font-size: 16px; font-weight: normal;">${positiveMessage}</span>`;
+    }
+</script>
+
+</body>
+</html>
